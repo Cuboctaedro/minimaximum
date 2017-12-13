@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="flex flex-wrap mb-4" role="main">
+    <div class="w-full lg:w-1/3 mb-4 p-4">
+        <h2 class="text-xl font-black font-sans mb-4">{{ .Title }}</h2>
+        <div>{{ .Params.eventdate }}</div>
+        <div class="mb-8">{{ .Params.location }}</div>
+        <div class="mb-8 content">{{ .Content }}</div>
+        {{with .Params.media}}
+        <div>
+        {{ partial "media.html" . }}
+        </div>
+        {{end}}
+    </div>
+    <div class="w-full lg:w-2/3 mb-4 p-4">
+        {{ range .Params.gallery }}
+        <figure class="mb-8">
+            <img src="{{ $.Site.BaseURL }}images/{{ $.File.TranslationBaseName }}/{{ . }}">
+        </figure>
+        {{end}}
+    </div>
+</article>
+
+{{ end }}
+
+

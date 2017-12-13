@@ -1,0 +1,10 @@
+{{ define "main" }}
+<article class="flex flex-wrap flex-col-reverse lg:flex-row mb-4" role="main">
+    <div class="w-full lg:w-1/2 mb-4 p-4 lg:mt-8">
+        {{ .Content }}
+    </div>
+    <div class="w-full lg:w-1/2 mb-4 p-4">
+        <img src="{{ .Site.BaseURL }}images/fan.jpg">
+    </div>
+</article>
+{{ end }}

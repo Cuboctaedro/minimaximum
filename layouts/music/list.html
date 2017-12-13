@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+<section class="flex flex-wrap mb-4" role="main">
+    {{ range (.Data.Pages.ByParam "sort") }}
+        <article class="w-1/2 mb-4 p-4">
+            {{ partial "media-fluid.html" .Params.media }}
+        </article>
+    {{ end }}
+</section>
+{{ end }}
