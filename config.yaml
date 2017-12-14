@@ -1,4 +1,4 @@
-baseURL: "http://minimaximum.netlify.com/"
+baseURL: "https://minimaximum.netlify.com/"
 relativeURLs: false
 canonifyURLs: false
 config: "config.yaml"
